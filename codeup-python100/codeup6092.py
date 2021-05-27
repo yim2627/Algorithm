@@ -11,6 +11,5 @@ for i in range(n):
 
 for j in range(1,24):
     print(d[j],end=' ') 
-# for i in range(23):
-#     print(d[m[i]],end=' ')
+
 
