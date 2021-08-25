@@ -1,11 +1,12 @@
 //
 //  main.swift
-//  1000-A+B
+//  BaekJoon_1000_A+B
 //
-//  Created by 임지성 on 2021/06/05.
+//  Created by 임지성 on 2021/08/25.
 //
 
 import Foundation
+
 
 print((readLine()?.split(separator: " ").map { Int($0)! }.reduce(0) { $0 + $1 })!)
 
