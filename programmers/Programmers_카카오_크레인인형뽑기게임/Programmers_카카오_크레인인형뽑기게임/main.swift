@@ -28,7 +28,7 @@ func solution(_ board: [[Int]], _ moves: [Int]) -> Int {
                 bucket.append(doll)
             }
             break
-        }
+        } 
     }
     
     return removeCnt
