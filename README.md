@@ -1,5 +1,5 @@
 # Algorithm <br />
-Algorithm Practice &amp; Test
+Algorithm Practice &amp; Test with Swift
 
 Programmers & CodeUp & Baekjoon <br />
 
