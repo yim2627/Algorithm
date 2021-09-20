@@ -1,5 +1,6 @@
 # Algorithm <br />
-Algorithm Practice &amp; Test with Swift
+Algorithm Practice &amp; Test with Swift   
+(Python Practice)
 
 Programmers & CodeUp & Baekjoon <br />
 
