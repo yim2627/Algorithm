@@ -6,33 +6,33 @@
 //
 
 import Foundation
-
-func solution(_ board: [[Int]], _ moves: [Int]) -> Int {
-    
-    var copiedboard = board
-    var bucket = [Int]()
-    var removeCnt = 0
-    
-    moves.forEach { move in
-        let trulyMoves = move - 1
-        for idx in 0..<copiedboard.count {
-            let doll = copiedboard[idx][trulyMoves]
-            guard doll != 0 else {
-                continue
-            }
-            copiedboard[idx][trulyMoves] = 0
-            if bucket.last == doll {
-                bucket.removeLast()
-                removeCnt += 2
-            } else {
-                bucket.append(doll)
-            }
-            break
-        } 
-    }
-    
-    return removeCnt
-}
+//
+//func solution(_ board: [[Int]], _ moves: [Int]) -> Int {
+//
+//    var copiedboard = board
+//    var bucket = [Int]()
+//    var removeCnt = 0
+//
+//    moves.forEach { move in
+//        let trulyMoves = move - 1
+//        for idx in 0..<copiedboard.count {
+//            let doll = copiedboard[idx][trulyMoves]
+//            guard doll != 0 else {
+//                continue
+//            }
+//            copiedboard[idx][trulyMoves] = 0
+//            if bucket.last == doll {
+//                bucket.removeLast()
+//                removeCnt += 2
+//            } else {
+//                bucket.append(doll)
+//            }
+//            break
+//        }
+//    }
+//
+//    return removeCnt
+//}
 
 
 /*
@@ -48,3 +48,31 @@ func solution(_ board: [[Int]], _ moves: [Int]) -> Int {
  2
  4
  */
+
+
+func solution(_ board: [[Int]], _ moves: [Int]) -> Int {
+    var copiedBoard = board
+    var bucket = [Int]()
+    var removeCount = 0
+    
+    moves.forEach { move in
+        let trulyMove = move - 1
+        for idx in 0..<copiedBoard.count {
+            let doll = copiedBoard[idx][trulyMove]
+            guard doll != 0 else {
+                continue
+            }
+            copiedBoard[idx][trulyMove] = 0
+            if bucket.last == doll {
+                bucket.removeLast()
+                removeCount += 2
+            } else {
+                bucket.append(doll)
+            }
+            break
+        }
+    }
+    return removeCount
+}
+
+print(solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]], [1,5,3,5,1,2,1,4]))
