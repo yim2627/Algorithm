@@ -9,7 +9,7 @@ import Foundation
 
 func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
     var answer = 0
-    var lostSet = Set(lost).subtracting(reserve)
+    var lostSet = Set(lost).subtracting(reserve) //(제한사항 5)
     let reserveSet = Set(reserve).subtracting(lost) // 중복제거(Set), Sutract(차집합) 이유 - 여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. (제한사항 5)
     
     for reserve in reserveSet {
